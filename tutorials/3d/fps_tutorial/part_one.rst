@@ -312,7 +312,7 @@ so it can move through the game world.
 
 _________
 
-Let's look is ``process_movement`` next:
+Let's look at ``process_input`` next:
 
 First we set ``dir`` to an empty :ref:`Vector3 <class_Vector3>`.
 
@@ -321,7 +321,7 @@ want the player's previous input to effect the player beyond a single ``process_
 
 Next we get the camera's global transform and store it as well, into the ``cam_xform`` variable.
 
-The reason we need the camera's global transform is so we can use it's directional vectors.
+The reason we need the camera's global transform is so we can use its directional vectors.
 Many have found directional vectors confusing, so let's take a second to explain how they work:
 
 _________
@@ -370,7 +370,7 @@ space will *always point in the same direction*.
 Local space is different, because it takes the rotation of the object into account.
 
 Local space can be defined as follows:
-The space in which a object's position is the origin of the universe. Because the position
+The space in which an object's position is the origin of the universe. Because the position
 of the origin can be at ``N`` many locations, the values derived from local space change
 with the position of the origin.
 
@@ -486,7 +486,7 @@ our ``DEACCEL`` constant so we decelerate.
 Then we interpolate our horizontal velocity, set our ``X`` and ``Z`` velocity to the interpolated horizontal velocity,
 and call ``move_and_slide`` to let the :ref:`KinematicBody <class_KinematicBody>` handle moving through the physics world.
 
-.. tip:: All of the code in ``process_movement`` is exactly the same as the movement code from the Kinematic Character demo!
+.. tip:: All of the code in ``process_movement`` is exactly the same as the movement code from the Kinematic Character demo! (https://github.com/godotengine/godot-demo-projects/tree/master/3d/kinematic_character)
 
 _________
 
